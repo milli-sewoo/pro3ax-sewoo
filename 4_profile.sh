@@ -9,6 +9,8 @@ echo "alias ls='ls --color=auto' "       >>   /etc/profile
 echo "alias ll='ls -lh' "                        >>   /etc/profile
 echo "alias grep='grep --color=auto' "   >>   /etc/profile
 
+sleep 20
+
 # 히스토리 사이즈 변경 (1000개 -> 100,000개)
 
 echoecho  $HISTSIZE$HISTSIZE
@@ -20,12 +22,16 @@ grep HISTSIZE .bashrc
 perl -pi -e 's/HISTSIZE=1000/HISTSIZE=100000/'   ~/.bashrc
 grep HISTSIZE .bashrc
 
+sleep 20
+
 # 히스토리 출력시 날짜가 표시 되도록 변경
 
 echo " "  >> /etc/profile
 echo "# Add timestamp to .bash_history "  >> /etc/profile
 echo 'export HISTTIMEFORMAT="20%y/%m/%d %T "' >> /etc/profile
 echo " "  >> /etc/profile
+
+sleep 20
 
 # root 와 user 의 프롬프트 색상을 다르게 설정.
 
@@ -37,6 +43,7 @@ logout
 echo "export PS1='\[\e[1;47;30m\][\u@\h:\W]\\$\[\e[m\] '" >> /home/sonic/.bashrc
 tail -1 /home/sonic/.bashrc
 
+sleep 20
 
 # 적용 확인
 
