@@ -9,4 +9,3 @@ grep HISTSIZE /etc/skel/.bashrc
 grep HISTSIZE .bashrc
 perl -pi -e 's/HISTSIZE=1000/HISTSIZE=100000/'   ~/.bashrc
 grep HISTSIZE .bashrc
-
