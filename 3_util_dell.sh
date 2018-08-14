@@ -8,7 +8,7 @@ xfsprogs ntfs-3g aptitude lvm2 dstat curl
 
 COUNTER=20
 
-until [  $COUNTER -lt 10 ]; do
+until [  $COUNTER -lt 1 ]; do
 
       echo COUNTER $COUNTER
 
@@ -20,7 +20,7 @@ aptitude install -y python-dev
 
 COUNTER=10
 
-until [  $COUNTER -lt 10 ]; do
+until [  $COUNTER -lt 1 ]; do
 
       echo COUNTER $COUNTER
 
