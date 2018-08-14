@@ -1,4 +1,4 @@
-#bin/bash
+#!/bin/bash
 
 echo " # 부팅시 화면에 부팅로그 표시되도록 grub 수정 , 불필요한 ipv6를 비활성화 "
 ip a | grep inet6
