@@ -6,7 +6,7 @@ apt-get install -y  \
 vim nfs-common rdate xauth firefox gcc make locate htop tmux git wget ipmitool \
 xfsprogs ntfs-3g aptitude lvm2 dstat curl 
 
-COUNTER=100
+COUNTER=20
 
 until [  $COUNTER -lt 1 ]; do
 
@@ -15,10 +15,12 @@ until [  $COUNTER -lt 1 ]; do
       let COUNTER-=1
 
 done
+
+sleep 20
 
 aptitude install -y python-dev 
 
-COUNTER=50
+COUNTER=10
 
 until [  $COUNTER -lt 1 ]; do
 
@@ -27,6 +29,8 @@ until [  $COUNTER -lt 1 ]; do
       let COUNTER-=1
 
 done
+
+sleep 10
 
 echo " # 서버 시간 동기화. "
 
