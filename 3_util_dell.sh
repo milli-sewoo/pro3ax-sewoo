@@ -6,7 +6,7 @@ apt-get install -y  \
 vim nfs-common rdate xauth firefox gcc make locate htop tmux git wget ipmitool \
 xfsprogs ntfs-3g aptitude lvm2 dstat curl 
 
-COUNTER=20
+COUNTER=100
 
 until [  $COUNTER -lt 1 ]; do
 
@@ -18,7 +18,7 @@ done
 
 aptitude install -y python-dev 
 
-COUNTER=10
+COUNTER=50
 
 until [  $COUNTER -lt 1 ]; do
 
