@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 echo " # 기본 유틸 설치. "
 
