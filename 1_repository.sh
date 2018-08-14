@@ -1,4 +1,4 @@
-#!bin/bash
+#bin/bash
 
 echo " # 기본 저장소 확인 "
 cat /etc/apt/sources.list  |  grep -v "#\|^$"
