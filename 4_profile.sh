@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 echo " # 기본 alias "
 
 echo " "  >> /etc/profile
