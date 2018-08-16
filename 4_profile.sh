@@ -15,7 +15,7 @@ echo " # 히스토리 사이즈 변경 (1000개 -> 100,000개 ) "
 
 echo  $HISTSIZE
 grep HISTSIZE /etc/skel/.bashrc
-perl -pi -e  grep HISTSIZE /etc/skel/.bashrc  's/HISTSIZE=1000/HISTSIZE=100000/'   /etc/skel/.bashrc
+perl -pi -e  's/HISTSIZE=1000/HISTSIZE=100000/'   /etc/skel/.bashrc
 grep HISTSIZE /etc/skel/.bashrc
 
 grep HISTSIZE .bashrc
@@ -38,7 +38,7 @@ tail -1 /root/.bashrc
 
 echo " root    /   로그아웃 "
 
-exit
+logout
 
 echo "export PS1='\[\e[1;47;30m\][\u@\h:\W]\\$\[\e[m\] '" >> /home/sonic/.bashrc
 tail -1 /home/sonic/.bashrc
