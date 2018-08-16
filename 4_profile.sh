@@ -38,7 +38,7 @@ tail -1 /root/.bashrc
 
 echo " root    /   로그아웃 "
 
-logout
+exit
 
 echo "export PS1='\[\e[1;47;30m\][\u@\h:\W]\\$\[\e[m\] '" >> /home/sonic/.bashrc
 tail -1 /home/sonic/.bashrc
