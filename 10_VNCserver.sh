@@ -31,4 +31,4 @@ echo " # VNC 암호 설정 (일반 사용자 계정으로 전환한 후) "
 
 su - sonic
 
-vncserver # vnc접속용 암호를 지정합니다.
+# vnc접속용 암호를 지정합니다.

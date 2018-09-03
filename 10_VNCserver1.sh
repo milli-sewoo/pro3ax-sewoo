@@ -1,5 +1,7 @@
 #!/bin/bash
 
+vncserver -kill :1
+
 mv .vnc/xstartup .vnc/xstartup.bak
 echo '#!/bin/bash  ' > .vnc/xstartup
 echo 'xrdb $HOME/.Xresources  ' >> .vnc/xstartup
