@@ -67,3 +67,46 @@ echo " Nvidia Driver 동작 확인. "
 nvidia-smi -L
 
 nvidia-smi
+
+
+echo " Cuda 9.0 환경변수를 Profile 에 추가 "
+
+EC2='
+### ADD Cuda PATH
+export PATH=/usr/local/cuda-9.0/bin:/usr/local/cuda-9.0/include:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64:/usr/local/cuda/extras/CUPTI/:$LD_LIBRARY_PATH
+export CUDA_HOME=/usr/local/cuda-9.0
+export CUDA_INC_DIR=/usr/local/cuda-9.0/include
+### add end.
+'
+
+
+echo "${EC2}"
+echo "${EC2}" >> /etc/profile
+
+tail  /etc/profile
+source /etc/profile
+source .bashrc
+
+echo " Cuda 컴파일러 동작 확인. "
+
+nvcc -V
+
+echo " Cuda 9.0 샘플 컴파일 "
+
+cp -r  /usr/local/cuda-9.0/samples/   ~/NVIDIA_CUDA-9.0_Samples
+cd ~/NVIDIA_CUDA-9.0_Samples
+
+time make -j$(grep process /proc/cpuinfo | wc -l)
+
+echo " Cuda 9.0 샘플 테스트 "
+
+cd ~
+
+./NVIDIA_CUDA-9.0_Samples/bin/x86_64/linux/release/deviceQuery
+
+./NVIDIA_CUDA-9.0_Samples/bin/x86_64/linux/release/p2pBandwidthLatencyTest
+
+./NVIDIA_CUDA-9.0_Samples/bin/x86_64/linux/release/nbody  --help
+
+./NVIDIA_CUDA-9.0_Samples/bin/x86_64/linux/release/nbody  -benchmark  -numdevices=4
