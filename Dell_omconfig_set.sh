@@ -1,6 +1,6 @@
 #!/bin/bash
 OMALERT='/opt/dell/srvadmin/bin/omconfig system alertaction'
-EXECAPPATH=/usr/local/sbin/dasan_alert_omsa.sh
+EXECAPPATH=/usr/local/sbin/mail_alert_OMSA.sh 
 
 $OMALERT event=intrusion              execappath=$EXECAPPATH
 $OMALERT event=systempeakpower        execappath=$EXECAPPATH
