@@ -37,19 +37,14 @@ done
 sleep 5
 
 ln -s /usr/lib/x86_64-linux-gnu/libGLU.so    /usr/lib/libGLU.so
-ll    /usr/lib/libGLU.so
 
 ln -s /usr/lib/x86_64-linux-gnu/libGL.so      /usr/lib/libGL.so
-ll   /usr/lib/libGL.so
 
 ln -s /usr/lib/x86_64-linux-gnu/libX11.so     /usr/lib/libX11.so
-ll  /usr/lib/libX11.so
 
 ln -s /usr/lib/x86_64-linux-gnu/libXi.so        /usr/lib/libXi.so
-ll  /usr/lib/libXi.so
 
 ln -s /usr/lib/x86_64-linux-gnu/libXmu.so    /usr/lib/libXmu.so
-ll /usr/lib/libXmu.so
 
 echo " cuda 9.0 설치 "
 
