@@ -109,4 +109,4 @@ cd ~
 
 ./NVIDIA_CUDA-9.0_Samples/bin/x86_64/linux/release/nbody  --help
 
-./NVIDIA_CUDA-9.0_Samples/bin/x86_64/linux/release/nbody  -benchmark  -numdevices=4
+./NVIDIA_CUDA-9.0_Samples/bin/x86_64/linux/release/nbody  -benchmark  -numdevices=2
