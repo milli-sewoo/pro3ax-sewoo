@@ -35,7 +35,3 @@ echo " root 와 user 의 프롬프트 색상을 다르게 설정. "
 
 echo "export PS1='\[\e[1;46;30m\][\u@\h:\W]\\$\[\e[m\] '" >> /root/.bashrc
 tail -1 /root/.bashrc
-
-echo " root    /   로그아웃 "
-
-exit
