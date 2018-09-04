@@ -134,6 +134,18 @@ cd ~/NVIDIA_CUDA-9.0_Samples
 
 time make -j$(grep process /proc/cpuinfo | wc -l)
 
+COUNTER=5
+
+until [  $COUNTER -lt 1 ]; do
+
+      echo COUNTER $COUNTER
+
+      let COUNTER-=1
+
+done
+
+sleep 5
+
 echo " Cuda 9.0 샘플 테스트 "
 
 cd ~
