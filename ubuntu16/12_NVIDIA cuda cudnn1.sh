@@ -68,6 +68,17 @@ nvidia-smi -L
 
 nvidia-smi
 
+COUNTER=5
+
+until [  $COUNTER -lt 1 ]; do
+
+      echo COUNTER $COUNTER
+
+      let COUNTER-=1
+
+done
+
+sleep 5
 
 echo " Cuda 9.0 환경변수를 Profile 에 추가 "
 
@@ -88,9 +99,33 @@ tail  /etc/profile
 source /etc/profile
 source .bashrc
 
+COUNTER=5
+
+until [  $COUNTER -lt 1 ]; do
+
+      echo COUNTER $COUNTER
+
+      let COUNTER-=1
+
+done
+
+sleep 5
+
 echo " Cuda 컴파일러 동작 확인. "
 
 nvcc -V
+
+COUNTER=5
+
+until [  $COUNTER -lt 1 ]; do
+
+      echo COUNTER $COUNTER
+
+      let COUNTER-=1
+
+done
+
+sleep 5
 
 echo " Cuda 9.0 샘플 컴파일 "
 
