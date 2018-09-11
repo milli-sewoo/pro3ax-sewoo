@@ -4,7 +4,7 @@ dpkg --list | grep vnc  # 현재 설치된 vnc 패키지 확인
 
 echo " # vnc server(tigervnc-server) 와 vnc viewer 를 설치 합니다. "
 
-apt-get -y install xfce4 xfce4-goodies tightvncserver
+apt-get -y install vnc4server 
 
 COUNTER=10
 

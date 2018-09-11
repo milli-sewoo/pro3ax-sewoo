@@ -2,10 +2,14 @@
 
 vncserver -kill :1
 
-mv .vnc/xstartup .vnc/xstartup.bak
-echo '#!/bin/bash  ' > .vnc/xstartup
-echo 'xrdb $HOME/.Xresources  ' >> .vnc/xstartup
-echo 'startxfce4 &  ' >> .vnc/xstartup
+cat .vnc/xstartup
+
+cp .vnc/xstartup .vnc/xstartup.bak
+echo 'gnome-panel &  ' >> .vnc/xstartup
+echo 'gnome-settings-daemon & ' >> .vnc/xstartup
+echo 'metacity &  ' >> .vnc/xstartup
+echo 'nautilus &  ' >> .vnc/xstartup
+
 cat .vnc/xstartup
 chmod +x .vnc/xstartup
 

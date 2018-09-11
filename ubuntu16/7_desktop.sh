@@ -10,4 +10,4 @@ systemctl get-default
 
 echo " # ubuntu desktop 설치 "
 
-apt-get install -y ubuntu-desktop
+apt-get -y install ubuntu-desktop gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal
